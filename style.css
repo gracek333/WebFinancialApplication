@@ -11,6 +11,17 @@ body
 	align-items: center;
 }
 
+h1
+{
+	font-family: 'Open Sans', sans-serif !important;
+	font-size: 26px;
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: 2px solid #1E4426;
+	font-weight: 700;
+	color: #1E4426;
+}
+
 .bg-money
 {
 	background-color: #0C1D10 !important;
@@ -91,4 +102,22 @@ body
 	color: #666;
 	border: .5px solid #1E4426;
 	font-size: 0.8rem;
+}
+
+.footer
+{
+	width: 100%;
+	color: #fff !important;
+	font-size: 0.8rem;
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 1.2rem;
+	background-color: #050C06;
+	letter-spacing: 3px;
+
+}
+
+.bi-envelope
+{
+	padding-bottom: 0.1rem;
 }
