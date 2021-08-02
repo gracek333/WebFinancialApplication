@@ -27,12 +27,6 @@ h1
 	background-color: #0C1D10 !important;
 }
 
-.bg-money .btn-md
-{
-	border-bottom: 0;
-	min-width: 10rem;
-}
-
 .navbar-text
 {
 	font-size: 1.8rem;
@@ -45,6 +39,19 @@ h1
 	padding-top: 8px;
 	padding-bottom: 15px;
 }
+
+.btn-md
+{
+	min-width: 12rem;
+	
+}
+
+.bg-money .btn-md
+{
+	border-bottom: 0;
+	min-width: 10rem;
+}
+
 
 .form-signin 
 {
@@ -120,4 +127,13 @@ h1
 .bi-envelope
 {
 	padding-bottom: 0.1rem;
+}
+
+.form-select
+{
+	background-color: #E0F1E4;
+	color: #666;
+	border: .5px solid #1E4426;
+	font-size: 0.8rem;
+	border-radius: 5px;
 }

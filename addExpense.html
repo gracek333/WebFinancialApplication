@@ -50,7 +50,69 @@
 	  </div>
 	</div>
   </nav>
-  
+	
+  <main>
+    <div class="form-signin pb-2 mb-5">
+	  <h1 class="mb-4">Dodaj wydatek</h1>
+	  <div class="row mb-3 pt-2 justify-content-center">
+		<label for="inputExpense" class="col-sm-5 me-sm-3 col-form-label">Kwota:</label>
+		<div class="col-sm-5">
+		  <input type="text" class="form-control" id="inputExpense" required placeholder="np. 12,34" onfocus="this.placeholder=''" onblur="this.placeholder='np. 12,34'">
+		</div>
+	  </div>
+	  <div class="row mb-3 justify-content-center">
+		<label for="inputDate" class="col-sm-5 me-sm-3 col-form-label">Data:</label>
+		<div class="col-sm-5">
+		  <input type="date" class="form-control" id="inputDate">
+		</div>
+	  </div>
+	  <div class="row mb-3 justify-content-center">
+		<label for="inputPaymentMethod" class="col-sm-5 me-sm-3 col-form-label">Sposób płatności:</label>
+		<div class="col-sm-5">
+		  <select class="form-select" name="inputPaymentMethod" id="inputPaymentMethod">
+			<option value="g">Gotówka</option>
+			<option value="d">Karta debetowa</option>
+			<option value="k" selected>Karta kredytowa</option>
+		  </select>
+		</div>
+	  </div>
+	  <div class="row mb-3 justify-content-center">
+		<label for="inputCategoryOfExpense" class="col-sm-5 me-sm-3 col-form-label">Kategoria:</label>
+		<div class="col-sm-5">
+		  <select class="form-select" name="inputCategoryOfExpense" id="inputCategoryOfExpense">
+			<option value="j" selected>Jedzenie</option>
+			<option value="m">Mieszkanie</option>
+			<option value="t">Transport</option>
+			<option value="e">Telekomunikacja</option>
+			<option value="o">Opieka zdrowotna</option>
+			<option value="u">Ubranie</option>
+			<option value="h">Higiena</option>
+			<option value="d">Dzieci</option>
+			<option value="r">Rozrywka</option>
+			<option value="w">Wycieczka</option>
+			<option value="s">Szkolenia</option>
+			<option value="k">Książki</option>
+			<option value="c">Oszczędności</option>
+			<option value="y">Emerytura</option>
+			<option value="p">Spłata długów</option>
+			<option value="i">Darowizna</option>
+			<option value="n">Inne wydatki</option>
+		  </select>
+	    </div>
+	  </div>
+	  <div class="row mb-3 justify-content-center">
+		<label for="inputComment" class="col-sm-5 me-sm-3 col-form-label">Komentarz:</label>
+		<div class="col-sm-5">
+		  <input type="text" class="form-control" id="inputComment" required placeholder="opcjonalnie" onfocus="this.placeholder=''" onblur="this.placeholder='opcjonalnie'">
+		</div>
+	  </div>
+	  <form class="ms-auto text-center mt-btn-sm">
+		<button class="btn btn-md my-sm-3 me-sm-2" type="submit">Anuluj</button>
+		<button class="btn btn-md my-sm-3 " type="submit">Dodaj</button>
+	  </form>
+	</div>
+  </main>
+	
   <footer class="footer mt-auto">
 	<div class="container-fluid">
 	  <span>2021 &copy; tdbo.pl  |  Zapraszam do współpracy </span>
@@ -65,4 +127,4 @@
   <script src="js/bootstrap.js"></script>
 
 </body>
-</html>  
+</html>
