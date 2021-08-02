@@ -1,0 +1,36 @@
+html,
+body {
+  height: 100%;
+}
+
+body
+{
+	background-color: #296136;
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	align-items: center;
+}
+
+.bg-money
+{
+	background-color: #0C1D10 !important;
+}
+
+.bg-money .btn-md
+{
+	border-bottom: 0;
+	min-width: 10rem;
+}
+
+.navbar-text
+{
+	font-size: 1.8rem;
+	font-family: 'Caveat', cursive;
+	color: #fff !important;
+}
+
+.navbar-brand img
+{
+	padding-top: 8px;
+	padding-bottom: 15px;
+}
