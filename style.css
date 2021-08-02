@@ -274,3 +274,33 @@ h3
 {
 	background-color: #000 !important;
 }
+
+.expenses
+{
+	padding-top: 20px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+}
+
+.expenses td
+{ 
+	border: 2px solid black;
+	padding: 10px 10px;
+	background-color: #cccccc;
+	font-size: 13px;
+}
+
+.expenses th 
+{
+	border: 2px solid black;
+	padding: 10px 10px;
+	background-color: #7f7f7f;
+	font-size: 13px;
+}
+
+.h3ColorForExpenses
+{
+	color: #373737;
+}
