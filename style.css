@@ -34,3 +34,61 @@ body
 	padding-top: 8px;
 	padding-bottom: 15px;
 }
+
+.form-signin 
+{
+  width: 100%;
+  max-width: 500px;
+  padding: 30px 50px;
+  margin: auto;
+  margin-top: 160px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 0;
+}
+
+.form-signin input[type="text"] {
+  margin-top: 0;
+}
+
+.form-signin button[type="submit"] {
+	background-color: #1E4426;
+	font-size: 20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+
+.col-form-label
+{
+	color: #1E4426;
+	font-size: 0.9rem;
+}
+
+.form-control
+{
+	background-color: #E0F1E4;
+	color: #666;
+	border: .5px solid #1E4426;
+	font-size: 0.8rem;
+}
