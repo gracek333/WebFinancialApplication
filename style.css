@@ -137,3 +137,85 @@ h1
 	font-size: 0.8rem;
 	border-radius: 5px;
 }
+
+.modal-title
+{
+	font-family: 'Open Sans', sans-serif !important;
+	font-size: 20px;
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: 2px solid #1E4426;
+	font-weight: 700;
+	color: #1E4426;
+}
+
+.modal-footer button
+{
+	background-color: #1E4426;
+	color: #fff;
+}
+
+.dropbtn {
+	
+  width: 150px;
+  background-color: #1E4426;
+  color: white;
+  border-radius: 5px;
+  padding: 15px 10px;
+  font-size: 14px;
+  border: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content 
+{
+	font-size: 12px;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a 
+{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover 
+{
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content 
+{
+	display: block;
+}
+
+.dropdown:hover .dropbtn 
+{
+	background-color: #296136;
+} 
+
+.container-of-balance
+{
+	margin-top: 160px;
+	margin-bottom: 40px;
+	background-color: #fff;
+	padding: 30px 50px;
+	max-width: 700px;
+	border-radius: 10px;
+	margin-right: auto;
+	margin-left: auto;
+}
