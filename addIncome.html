@@ -50,7 +50,46 @@
 	  </div>
 	</div>
   </nav>
-	
+
+  <main>
+    <div class="form-signin pb-2 mb-5">
+	  <h1 class="mb-4">Dodaj przychód</h1>
+	  <div class="row mb-3 pt-2 justify-content-center">
+	    <label for="inputIncome" class="col-sm-5 me-sm-3 col-form-label">Kwota:</label>
+	    <div class="col-sm-5">
+	      <input type="text" class="form-control" id="inputIncome" required placeholder="np. 12,34" onfocus="this.placeholder=''" onblur="this.placeholder='np. 12,34'">
+	    </div>
+	  </div>
+	  <div class="row mb-3 justify-content-center">
+	    <label for="inputDate" class="col-sm-5 me-sm-3 col-form-label">Data:</label>
+	    <div class="col-sm-5">
+	      <input type="date" class="form-control" id="inputDate">
+	    </div>
+	  </div>
+	  <div class="row mb-3 justify-content-center">
+	    <label for="inputCategoryOfIncome" class="col-sm-5 me-sm-3 col-form-label">Kategoria:</label>
+	    <div class="col-sm-5">
+	      <select class="form-select" name="inputCategoryOfIncome" id="inputCategoryOfIncome">
+	        <option value="w" selected>Wynagrodzenie</option>
+		    <option value="o">Odsetki bankowe</option>
+		    <option value="s">Sprzedaż na allegro</option>
+		    <option value="i">Inne</option>
+		  </select>
+		</div>
+	  </div>
+	  <div class="row mb-3 justify-content-center">
+	    <label for="inputComment" class="col-sm-5 me-sm-3 col-form-label">Komentarz:</label>
+	    <div class="col-sm-5">
+	      <input type="text" class="form-control" id="inputComment" required placeholder="opcjonalnie" onfocus="this.placeholder=''" onblur="this.placeholder='opcjonalnie'">
+	    </div>
+	  </div>
+	  <form class="ms-auto text-center mt-btn-sm">
+	    <button class="btn btn-md btn-warning my-sm-3 me-sm-2" type="submit">Anuluj</button>
+	    <button class="btn btn-md btn-primary my-sm-3 " type="submit">Dodaj</button>
+	  </form>
+	</div>
+  </main>
+
   <footer class="footer mt-auto">
     <div class="container-fluid">
       <span>2021 &copy; tdbo.pl  |  Zapraszam do współpracy </span>
