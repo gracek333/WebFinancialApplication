@@ -1,3 +1,16 @@
+<?php
+
+  session_start();
+
+  if((isset($_SESSION['loggedIn'])) && ($_SESSION['loggedIn']==true))
+  {
+	header('Location:main-menu.php');
+	exit();
+  }
+
+?>
+
+
 <!DOCTYPE HTML>
 <html lang="pl">
 
@@ -34,28 +47,34 @@
 		  Twój domowy budżet online!
 		</span>
 		<form class="ms-auto text-center">
-		  <button class="btn btn-md btn-warning me-2 mt-1" type="submit">Zarejestruj się</button>
-		  <button class="btn btn-md btn-primary me-2 mt-1" type="submit">Zaloguj się</button>
+		  <a class="btn btn-md btn-warning me-2 mt-1" href="registration.php" >Zarejestruj się</a>
 		</form>
 	  </div>
 	</div>
   </nav>
   
   <main class="form-signin pb-4 mb-5">
-	<form>
+	<form action="logging.php" method="post">
 	  <h1 class="mb-4">Logowanie</h1>
 	  <div class="row mb-3 pt-2">
 		<label for="inputEmail" class="col-sm-5 col-form-label">Podaj adres email:</label>
 		<div class="col-sm-7">
-		  <input type="email" class="form-control" id="inputEmail">
+		  <input type="email" class="form-control" id="inputEmail" name="email">
 		</div>
 	  </div>
 	  <div class="row mb-3">
 		<label for="inputPassword" class="col-sm-5 col-form-label">Podaj hasło:</label>
 		<div class="col-sm-7">
-		  <input type="password" class="form-control" id="inputPassword">
+		  <input type="password" class="form-control" id="inputPassword" name="password">
 		</div>
 	  </div>
+	  
+	  <?php
+	  
+	    if(isset($_SESSION['error'])) echo $_SESSION['error'];
+	  
+	  ?>
+	  
 	  <button class="w-100 btn btn-lg" type="submit">Zaloguj się</button>
 	</form>
   </main>  
