@@ -54,7 +54,7 @@
   </nav>
   
   <main class="form-signin pb-4 mb-5">
-	<form action="logging.php" method="post">
+	<form action="logging-in.php" method="post">
 	  <h1 class="mb-4">Logowanie</h1>
 	  <div class="row mb-3 pt-2">
 		<label for="inputEmail" class="col-sm-5 col-form-label">Podaj adres email:</label>
