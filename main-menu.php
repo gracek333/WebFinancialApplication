@@ -2,9 +2,9 @@
 
   session_start();
 
-  if(!isset($_SESSION['zalogowany']))
+  if(!isset($_SESSION['loggedIn']))
   {
-	header('Location:logIn.php');
+	header('Location:log-in.php');
 	exit();
   }
 
