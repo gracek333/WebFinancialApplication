@@ -62,6 +62,7 @@ h1
   margin-top: 160px;
   background-color: #fff;
   border-radius: 10px;
+  color: #1E4426;
 }
 
 .form-signin .checkbox {
@@ -70,6 +71,11 @@ h1
 
 .form-signin .form-floating:focus-within {
   z-index: 2;
+}
+
+.form-signin input
+{
+  color: #1E4426; !important;
 }
 
 .form-signin input[type="email"] {
@@ -303,4 +309,25 @@ h3
 .h3ColorForExpenses
 {
 	color: #373737;
+}
+
+.g-recaptcha
+{
+    padding-top: 5px;
+}
+
+.empty-row
+{
+	border-top: 2px solid #1E4426;
+	margin-left: 3px;
+	margin-right: 3px;
+	padding-bottom: 5px;
+}
+
+.error
+{
+	color: red!important;
+	font-size: 0.7rem;
+	margin-top: 5px;
+	margin-bottom: 0px;
 }
