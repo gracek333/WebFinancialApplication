@@ -103,6 +103,12 @@ h1
 	letter-spacing: 2px;
 }
 
+.form-signin p
+{
+	font-size: 1.1rem;
+	color: #1E4426;
+}
+	
 .col-form-label
 {
 	color: #1E4426;
@@ -224,6 +230,27 @@ h1
 	border-radius: 10px;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.container-of-balance button[type="submit"] {
+	background-color: #1E4426;
+	font-size: 20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+
+.container-of-balance p
+{
+	font-size: 1.1rem;
+	line-height: 1.9rem;
+	color: #1E4426;
+	margin: 0;
 }
 
 h3

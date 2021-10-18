@@ -102,8 +102,8 @@
 			  //wszystkie testy zaliczone! dodajemy gracza do bazy
 			  if ($connection->query("INSERT INTO users VALUES (NULL, '$username', '$hashedPassword', '$email')"))
 			  {
-				  $_SESSION['rejestrationSucceeded'] = true;
-				  //header('Location: welcome.php'); //1:42
+				  $_SESSION['registrationSucceeded'] = true;
+				  header('Location: welcome.php'); 
 			  }
 			  else
 			  {
