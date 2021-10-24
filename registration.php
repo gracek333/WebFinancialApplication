@@ -109,6 +109,8 @@
 					  $userId = $row['id'];
 				
 					  $connection->query("INSERT INTO expenses_category_assigned_to_users (id, user_id, name) SELECT NULL, '$userId', expenses_category_default.name FROM expenses_category_default");
+					  
+					  $connection->query("INSERT INTO incomes_category_assigned_to_users (id, user_id, name) SELECT NULL, '$userId', incomes_category_default.name FROM incomes_category_default");
 				  }
 				  
 				  
