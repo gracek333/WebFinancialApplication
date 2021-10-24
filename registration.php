@@ -102,6 +102,16 @@
 			  //wszystkie testy zaliczone! dodajemy gracza do bazy
 			  if ($connection->query("INSERT INTO users VALUES (NULL, '$username', '$hashedPassword', '$email')"))
 			  {
+				  
+				  if ($result2 = $connection->query("SELECT * FROM users WHERE email='$email'"))
+				  {
+					  $row = $result2->fetch_assoc();
+					  $userId = $row['id'];
+				
+					  $connection->query("INSERT INTO expenses_category_assigned_to_users (id, user_id, name) SELECT NULL, '$userId', expenses_category_default.name FROM expenses_category_default");
+				  }
+				  
+				  
 				  $_SESSION['registrationSucceeded'] = true;
 				  header('Location: welcome.php'); 
 			  }
