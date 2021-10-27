@@ -73,9 +73,15 @@ h1
   z-index: 2;
 }
 
+.form-signin label
+{
+	margin-bottom: 0.1rem;
+	font-size: 0.9rem;
+}
+
 .form-signin input
 {
-  color: #1E4426; !important;
+  color: #1E4426 !important;
 }
 
 .form-signin input[type="email"] {
@@ -121,6 +127,7 @@ h1
 	color: #666;
 	border: .5px solid #1E4426;
 	font-size: 0.8rem;
+	
 }
 
 .footer
@@ -143,11 +150,13 @@ h1
 
 .form-select
 {
+	padding-top: 8px;
 	background-color: #E0F1E4;
-	color: #666;
+	color: #1E4426;
 	border: .5px solid #1E4426;
 	font-size: 0.8rem;
 	border-radius: 5px;
+	margin-bottom: 0.2rem;
 }
 
 .modal-title
