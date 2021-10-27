@@ -44,13 +44,13 @@
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav me-auto mb-2 mb-sm-0 px-10 mt-1">
 	      <li class="nav-item">
-			<a class="nav-link" href="#">Dodaj przychód</a>
+			<a class="nav-link" href="add-income.php">Dodaj przychód</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">Dodaj wydatek</a>
+			<a class="nav-link" href="add-expense.php">Dodaj wydatek</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">Przeglądaj bilans</a>
+			<a class="nav-link" href="show-balance.php">Przeglądaj bilans</a>
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link" href="#">Ustawienia</a>

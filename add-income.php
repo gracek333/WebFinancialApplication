@@ -1,3 +1,41 @@
+<?php
+
+  session_start();
+
+  if(!isset($_SESSION['loggedIn']))
+  {
+	header('Location:log-in.php');
+	exit();
+  }
+
+    require_once "connect.php";
+	mysqli_report(MYSQLI_REPORT_STRICT);
+	try
+	{
+		$connection = new mysqli($host, $db_user, $db_password, $db_name);
+		if($connection->connect_errno!=0)
+		{
+			throw new Exception(mysqli_connect_errno());
+		}
+		else
+		{
+			$userId = $_SESSION['id'];
+			$sql = "SELECT * FROM incomes_category_assigned_to_users WHERE incomes_category_assigned_to_users.user_id='$userId'";
+			
+			$categories_of_incomes = mysqli_query($connection, $sql);
+			
+			
+			$connection->close();
+		}
+	}
+	catch(Exception $serverError)
+	{
+		echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy o dodanie przychodu w innym terminie!</span>';
+		echo '<br/>Informacja developerska: '.$serverError;
+	}
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 
@@ -32,20 +70,20 @@
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav me-auto mb-2 mb-sm-0 px-10 mt-1">
 	      <li class="nav-item">
-			<a class="nav-link active" href="#">Dodaj przychód</a>
+			<a class="nav-link active" href="add-income.php">Dodaj przychód</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">Dodaj wydatek</a>
+			<a class="nav-link" href="add-expense.php">Dodaj wydatek</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">Przeglądaj bilans</a>
+			<a class="nav-link" href="show-balance.php">Przeglądaj bilans</a>
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link" href="#">Ustawienia</a>
 		  </li>
 		</ul>
 		<form class="ms-auto text-center">
-		  <button class="btn btn-md btn-danger me-2 mt-1" type="submit">Wyloguj się</button>
+		  <a class="btn btn-md btn-danger me-2 mt-1" href="logging-out.php">Wyloguj się</a>
 		</form>
 	  </div>
 	</div>
@@ -66,7 +104,9 @@
 	      <input type="date" class="form-control" id="inputDate">
 	    </div>
 	  </div>
-	  <div class="row mb-3 justify-content-center">
+	  
+	  
+	  <!--<div class="row mb-3 justify-content-center">
 	    <label for="inputCategoryOfIncome" class="col-sm-5 me-sm-3 col-form-label">Kategoria:</label>
 	    <div class="col-sm-5">
 	      <select class="form-select" name="inputCategoryOfIncome" id="inputCategoryOfIncome">
@@ -76,7 +116,38 @@
 		    <option value="i">Inne</option>
 		  </select>
 		</div>
+	  </div>-->
+	  
+	  <div class="row mb-3 justify-content-center">
+	    <label for="inputCategoryOfIncome" class="col-sm-5 me-sm-3 col-form-label">Kategoria:</label>
+	    <div class="col-sm-5">
+	      <select class="form-select" name="inputCategoryOfIncome" id="inputCategoryOfIncome">
+	        
+			<?php 
+                // use a while loop to fetch data 
+                // from the $all_categories variable 
+                // and individually display as an option
+                while ($category = mysqli_fetch_array(
+                        $categories_of_incomes,MYSQLI_ASSOC)):; 
+            ?>
+                <option value="<?php echo $category["id"];
+                    // The value we usually set is the primary key
+                ?>">
+                    <?php echo $category["name"];
+                        // To show the category name to the user
+                    ?>
+                </option>
+            <?php 
+                endwhile; 
+                // While loop must be terminated
+            ?>
+			
+			
+		  </select>
+		</div>
 	  </div>
+	  
+	  
 	  <div class="row mb-3 justify-content-center">
 	    <label for="inputComment" class="col-sm-5 me-sm-3 col-form-label">Komentarz:</label>
 	    <div class="col-sm-5">
