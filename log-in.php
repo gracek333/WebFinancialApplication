@@ -60,20 +60,24 @@
 		<label for="inputEmail" class="col-sm-5 col-form-label">Podaj adres email:</label>
 		<div class="col-sm-7">
 		  <input type="email" class="form-control" id="inputEmail" name="email">
+		  
 		</div>
 	  </div>
 	  <div class="row mb-3">
 		<label for="inputPassword" class="col-sm-5 col-form-label">Podaj hasło:</label>
 		<div class="col-sm-7">
 		  <input type="password" class="form-control" id="inputPassword" name="password">
+		  <?php
+			if (isset($_SESSION['error_log_in']))
+			{
+			  echo '<div class="error">'.$_SESSION['error_log_in'].'</div>';
+			  unset($_SESSION['error_log_in']);
+			}
+		  ?>
 		</div>
 	  </div>
 	  
-	  <?php
 	  
-	    if(isset($_SESSION['error'])) echo $_SESSION['error'];
-	  
-	  ?>
 	  
 	  <button class="w-100 btn btn-lg" type="submit">Zaloguj się</button>
 	</form>
