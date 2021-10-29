@@ -109,6 +109,25 @@ h1
 	letter-spacing: 2px;
 }
 
+.likeButton
+{
+	background-color: #1E4426;
+	font-size: 20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+
+.likeButton:hover 
+{
+	color: #FFF! important;
+}
+
 .form-signin p
 {
 	font-size: 1.1rem;
@@ -366,4 +385,14 @@ h3
 	font-size: 0.7rem;
 	margin-top: 5px;
 	margin-bottom: 0px;
+}
+
+.addedTransaction
+{
+	color: #1E4426;
+	font-size: 1rem;
+	font-weight: 700;
+	margin-top: 0px;
+	padding-top: 0;
+	margin-bottom: 18px;
 }
