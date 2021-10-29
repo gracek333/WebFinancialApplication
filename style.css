@@ -81,7 +81,7 @@ h1
 
 .form-signin input
 {
-  color: #1E4426 !important;
+  color: #000 !important;
 }
 
 .form-signin input[type="email"] {
@@ -95,6 +95,8 @@ h1
 .form-signin input[type="text"] {
   margin-top: 0;
 }
+
+input[type=date]::-webkit-datetime-edit-year-field { color: #000; }
 
 .form-signin button[type="submit"] {
 	background-color: #1E4426;
@@ -171,7 +173,7 @@ h1
 {
 	padding-top: 8px;
 	background-color: #E0F1E4;
-	color: #1E4426;
+	color: #000;
 	border: .5px solid #1E4426;
 	font-size: 0.8rem;
 	border-radius: 5px;
@@ -403,4 +405,8 @@ h3
 	padding-top: 0;
 	margin-bottom: 20px;
 	letter-spacing: 2.5px;
+}
+
+.mt-1 {
+  margin-top: 0.12rem !important;
 }

@@ -58,14 +58,14 @@
 	  <h1 class="mb-4">Logowanie</h1>
 	  <div class="row mb-3 pt-2">
 		<label for="inputEmail" class="col-sm-5 col-form-label">Podaj adres email:</label>
-		<div class="col-sm-7">
+		<div class="col-sm-7 mt-1">
 		  <input type="email" class="form-control" id="inputEmail" name="email">
 		  
 		</div>
 	  </div>
 	  <div class="row mb-3">
 		<label for="inputPassword" class="col-sm-5 col-form-label">Podaj hasło:</label>
-		<div class="col-sm-7">
+		<div class="col-sm-7 mt-1">
 		  <input type="password" class="form-control" id="inputPassword" name="password">
 		  <?php
 			if (isset($_SESSION['error_log_in']))

@@ -101,6 +101,8 @@
 					  $connection->query("INSERT INTO expenses_category_assigned_to_users (id, user_id, name) SELECT NULL, '$userId', expenses_category_default.name FROM expenses_category_default");
 					  
 					  $connection->query("INSERT INTO incomes_category_assigned_to_users (id, user_id, name) SELECT NULL, '$userId', incomes_category_default.name FROM incomes_category_default");
+					  
+					  $connection->query("INSERT INTO payment_methods_assigned_to_users (id, user_id, name) SELECT NULL, '$userId', payment_methods_default.name FROM payment_methods_default");
 				  }
 				  
 				  
@@ -175,8 +177,8 @@
 	  <h1 class="mb-4">Formularz rejestracyjny</h1>
 	  <div class="row mb-3 pt-2">
 		<label for="inputName" class="col-sm-5 col-form-label">Podaj imię:</label>
-		<div class="col-sm-7">
-		  <input type="text" class="form-control" id="inputName" name="name">
+		<div class="col-sm-7 mt-1">
+		  <input type="text" class="form-control" id="inputName" name="name" spellcheck="false">
 		  <?php
 		    if (isset($_SESSION['e_username']))
 			{
@@ -188,8 +190,8 @@
 		 
 	  </div>
 	  <div class="row mb-3">
-		<label for="inputEmail" class="col-sm-5 col-form-label">Podaj adres email:</label>
-		<div class="col-sm-7">
+		<label for="inputEmail" class="col-sm-5 col-form-label" spellcheck="false">Podaj adres email:</label>
+		<div class="col-sm-7 mt-1">
 		  <input type="email" class="form-control" id="inputEmail" name="email">
 		  <?php
 		    if (isset($_SESSION['e_email']))
@@ -201,14 +203,14 @@
 		</div>
 	  </div>
 	  <div class="row mb-3">
-	    <label for="repeatEmail" class="col-sm-5 col-form-label">Powtórz adres email:</label>
-		<div class="col-sm-7">
+	    <label for="repeatEmail" class="col-sm-5 col-form-label" spellcheck="false">Powtórz adres email:</label>
+		<div class="col-sm-7 mt-1">
 		  <input type="email" class="form-control" id="repeatEmail" name="repeatedEmail">
 		</div>
 	  </div>
 	  <div class="row mb-3">
 		<label for="inputPassword" class="col-sm-5 col-form-label">Podaj hasło:</label>
-		<div class="col-sm-7">
+		<div class="col-sm-7 mt-1">
 		  <input type="password" class="form-control" id="inputPassword" name="password">
 		  <?php
 		    if (isset($_SESSION['e_password']))
@@ -221,7 +223,7 @@
 	  </div>
 	  <div class="row mb-4">
 		<label for="repeatPassword" class="col-sm-5 col-form-label">Powtórz hasło:</label>
-		<div class="col-sm-7">
+		<div class="col-sm-7 mt-1">
 		  <input type="password" class="form-control" id="repeatPassword" name="repeatedPassword">
 		</div>
 	  </div>
