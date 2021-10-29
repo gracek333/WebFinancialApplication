@@ -390,9 +390,17 @@ h3
 .addedTransaction
 {
 	color: #1E4426;
+	border-bottom: 1.5px solid #1E4426 !important;
+	text-align: center;
 	font-size: 1rem;
 	font-weight: 700;
+	max-width: 240px;
+	padding-bottom: 5px;
+	/*margin-left: 550px;
+	margin-right: 550px;*/
+	
 	margin-top: 0px;
 	padding-top: 0;
-	margin-bottom: 18px;
+	margin-bottom: 20px;
+	letter-spacing: 2.5px;
 }

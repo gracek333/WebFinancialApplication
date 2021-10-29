@@ -7,7 +7,10 @@
 	header('Location:log-in.php');
 	exit();
   }
-
+	
+	$min = new DateTime("first day of last month");
+    $max = new DateTime("last day of this month");
+	
     require_once "connect.php";
 	mysqli_report(MYSQLI_REPORT_STRICT);
 	try
@@ -19,8 +22,6 @@
 		}
 		else
 		{
-			
-			
 			
 			$userId = $_SESSION['id'];
 			
@@ -45,7 +46,6 @@
 				{
 					$amountOfIncome = number_format($amountWithDot, 2, '.', '');
 				}
-				//$amountOfIncome = $_POST['inputIncome'];
 				
 				$enteredDate = $_POST['inputDate'];
 				
@@ -70,11 +70,6 @@
 				     throw new Exception($connection->error);
 				}					
 			}
-			
-			/*$sql = "SELECT * FROM incomes_category_assigned_to_users WHERE incomes_category_assigned_to_users.user_id='$userId'";
-			
-			$categories_of_incomes = mysqli_query($connection, $sql);*/
-			
 			
 			$connection->close();
 		}
@@ -153,7 +148,7 @@
 		  ?>
 	    <label for="inputIncome" class="col-sm-5 me-sm-3 col-form-label">Kwota:</label>
 	    <div class="col-sm-5">
-	      <input type="text" class="form-control" name="inputIncome" required placeholder="np. 12,34" onfocus="this.placeholder=''" onblur="this.placeholder='np. 12.34'">
+	      <input type="text" class="form-control" name="inputIncome" required placeholder="np. 1234,56" onfocus="this.placeholder=''" onblur="this.placeholder='np. 1234,56'">
 		  <?php
 		    if (isset($_SESSION['e_amount']))
 			{
@@ -166,7 +161,7 @@
 	  <div class="row mb-3 justify-content-center">
 	    <label for="inputDate" class="col-sm-5 me-sm-3 col-form-label">Data:</label>
 	    <div class="col-sm-5">
-	      <input type="date" class="form-control" name="inputDate">
+	      <input type="date" class="form-control" value="<?php print(date("Y-m-d")); ?>" min=<?=$min->format("Y-m-d")?> max=<?=$max->format("Y-m-d")?> name="inputDate" id="date" required>
 	    </div>
 	  </div>
 	  
