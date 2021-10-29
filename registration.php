@@ -17,16 +17,6 @@
 	  $wszystko_OK = false;
 	  $_SESSION['e_username'] = "Imię musi posiadać od 3 do 50 znaków!";
 	}
-	
-	//sprawdzenie skladu name'a
-
-	/*if (ctype_alnum($username)==false)
-	{
-	  $wszystko_OK = false;
-	  $_SESSION['e_username'] = "Imię może składać się tylko z liter i cyfr (bez polskich znaków)";
-	}*/
-	
-	//sprawdzenie poprawnosci adresu email
 
 	$email = $_POST['email'];
 	$repeatedEmail = $_POST['repeatedEmail'];

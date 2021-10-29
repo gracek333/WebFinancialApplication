@@ -7,7 +7,10 @@
 	header('Location:log-in.php');
 	exit();
   }
-
+	
+	$min = new DateTime("first day of last month");
+    $max = new DateTime("last day of this month");
+	
     require_once "connect.php";
 	mysqli_report(MYSQLI_REPORT_STRICT);
 	try
@@ -19,11 +22,54 @@
 		}
 		else
 		{
+			
 			$userId = $_SESSION['id'];
+			
 			$sql = "SELECT * FROM incomes_category_assigned_to_users WHERE incomes_category_assigned_to_users.user_id='$userId'";
 			
 			$categories_of_incomes = mysqli_query($connection, $sql);
 			
+			//jesli kliknieto submit - przebieg walidacji + dodanie do db_name
+			if(isset($_POST['inputIncome']))
+			{
+				$dataIsCorrect = true;
+				
+				//poprawność kwoty
+				$amountInString = $_POST['inputIncome'];
+				$amountWithDot = str_replace(',', '.', $amountInString);
+				if (!(is_numeric($amountWithDot)))
+				{
+					$dataIsCorrect = false;  
+					$_SESSION['e_amount'] = "Niewłaściwy format kwoty!";
+				}
+				else
+				{
+					$amountOfIncome = number_format($amountWithDot, 2, '.', '');
+				}
+				
+				$enteredDate = $_POST['inputDate'];
+				
+				$selectedCategory = $_POST['inputCategoryOfIncome'];
+				 
+				$enteredComment = $_POST['inputComment'];
+				
+				if ($dataIsCorrect == true)
+				{
+				
+					if ($connection->query("INSERT INTO incomes VALUES (NULL, '$userId', '$selectedCategory', '$amountOfIncome', '$enteredDate', '$enteredComment')"))
+					{
+						$_SESSION['added_income'] = "Dodano przychód!";
+					}
+					else
+					{
+					  throw new Exception($connection->error);
+					}
+				}
+				else
+				{
+				     throw new Exception($connection->error);
+				}					
+			}
 			
 			$connection->close();
 		}
@@ -89,34 +135,35 @@
 	</div>
   </nav>
 
-  <main>
-    <div class="form-signin pb-2 mb-5">
-	  <h1 class="mb-4">Dodaj przychód</h1>
-	  <div class="row mb-3 pt-2 justify-content-center">
+  <main class="form-signin pb-2 mb-5">
+    <form method="post">
+	  <h1 class="mb-1">Dodaj przychód</h1>
+	  <div class="row mb-3 pt-3 justify-content-center">
+		<?php
+		    if (isset($_SESSION['added_income']))
+			{
+			  echo '<div class="addedTransaction">'.$_SESSION['added_income'].'</div>';
+			  unset($_SESSION['added_income']);
+			}
+		  ?>
 	    <label for="inputIncome" class="col-sm-5 me-sm-3 col-form-label">Kwota:</label>
 	    <div class="col-sm-5">
-	      <input type="text" class="form-control" id="inputIncome" required placeholder="np. 12,34" onfocus="this.placeholder=''" onblur="this.placeholder='np. 12,34'">
+	      <input type="text" class="form-control" name="inputIncome" required placeholder="np. 1234,56" onfocus="this.placeholder=''" onblur="this.placeholder='np. 1234,56'">
+		  <?php
+		    if (isset($_SESSION['e_amount']))
+			{
+			  echo '<div class="error">'.$_SESSION['e_amount'].'</div>';
+			  unset($_SESSION['e_amount']);
+			}
+		  ?>
 	    </div>
 	  </div>
 	  <div class="row mb-3 justify-content-center">
 	    <label for="inputDate" class="col-sm-5 me-sm-3 col-form-label">Data:</label>
 	    <div class="col-sm-5">
-	      <input type="date" class="form-control" id="inputDate">
+	      <input type="date" class="form-control" value="<?php print(date("Y-m-d")); ?>" min=<?=$min->format("Y-m-d")?> max=<?=$max->format("Y-m-d")?> name="inputDate" id="date" required>
 	    </div>
 	  </div>
-	  
-	  
-	  <!--<div class="row mb-3 justify-content-center">
-	    <label for="inputCategoryOfIncome" class="col-sm-5 me-sm-3 col-form-label">Kategoria:</label>
-	    <div class="col-sm-5">
-	      <select class="form-select" name="inputCategoryOfIncome" id="inputCategoryOfIncome">
-	        <option value="w" selected>Wynagrodzenie</option>
-		    <option value="o">Odsetki bankowe</option>
-		    <option value="s">Sprzedaż na allegro</option>
-		    <option value="i">Inne</option>
-		  </select>
-		</div>
-	  </div>-->
 	  
 	  <div class="row mb-3 justify-content-center">
 	    <label for="inputCategoryOfIncome" class="col-sm-5 me-sm-3 col-form-label">Kategoria:</label>
@@ -147,18 +194,17 @@
 		</div>
 	  </div>
 	  
-	  
 	  <div class="row mb-3 justify-content-center">
 	    <label for="inputComment" class="col-sm-5 me-sm-3 col-form-label">Komentarz:</label>
 	    <div class="col-sm-5">
-	      <input type="text" class="form-control" id="inputComment" required placeholder="opcjonalnie" onfocus="this.placeholder=''" onblur="this.placeholder='opcjonalnie'">
+	      <input type="text" class="form-control" name="inputComment" placeholder="opcjonalnie" onfocus="this.placeholder=''" onblur="this.placeholder='opcjonalnie'">
 	    </div>
 	  </div>
 	  <form class="ms-auto text-center mt-btn-sm">
-	    <button class="btn btn-md btn-warning my-sm-3 me-sm-2" type="submit">Anuluj</button>
+	    <a class="btn btn-md my-sm-3 me-sm-2 likeButton" href="main-menu.php">Anuluj</a>
 	    <button class="btn btn-md btn-primary my-sm-3 " type="submit">Dodaj</button>
 	  </form>
-	</div>
+	</form>
   </main>
 
   <footer class="footer mt-auto">

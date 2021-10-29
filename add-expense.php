@@ -53,7 +53,7 @@
 	
   <main>
     <div class="form-signin pb-2 mb-5">
-	  <h1 class="mb-4">Dodaj wydatek</h1>
+	  <h1 class="mb-3">Dodaj wydatek</h1>
 	  <div class="row mb-3 pt-2 justify-content-center">
 		<label for="inputExpense" class="col-sm-5 me-sm-3 col-form-label">Kwota:</label>
 		<div class="col-sm-5">
