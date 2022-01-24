@@ -202,7 +202,8 @@
 	  </div>
 	  <form class="ms-auto text-center mt-btn-sm">
 	    <a class="btn btn-md my-sm-3 me-sm-2 likeButton" href="main-menu.php">Anuluj</a>
-	    <button class="btn btn-md btn-primary my-sm-3 " type="submit">Dodaj</button>
+	    <!--<button class="btn btn-md btn-primary my-sm-3 " type="submit">Dodaj</button>-->
+		<button class="btn btn-md btn-primary my-sm-3" type="submit">Dodaj</button>
 	  </form>
 	</form>
   </main>

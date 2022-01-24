@@ -35,7 +35,7 @@
 <body class="text-center d-flex flex-column min-vh-100">
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-money">
 	<div class="container-fluid px-4">
-	  <a class="navbar-brand" href="#">
+	  <a class="navbar-brand" href="main-menu.php">
 		<img src="img/dollar.png" alt="...">
 	  </a>
 	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
