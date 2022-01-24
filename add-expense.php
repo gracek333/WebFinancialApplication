@@ -62,13 +62,6 @@
 				 
 				$enteredComment = $_POST['inputComment'];
 				
-				/*echo $amountOfExpense;
-				echo $enteredDate;
-				echo $selectedCategory;
-				echo $selectedPaymentMethod;
-				echo $enteredComment;
-				exit();*/
-				
 				if ($dataIsCorrect == true)
 				{
 				

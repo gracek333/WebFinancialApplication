@@ -3,6 +3,11 @@ body {
   height: 100%;
 }
 
+html
+{
+	overflow-y: overlay;
+}
+
 body
 {
 	background-color: #296136;
@@ -42,7 +47,7 @@ h1
 
 .btn-md
 {
-	min-width: 12rem;
+	min-width: 47%;
 	
 }
 
@@ -100,11 +105,12 @@ input[type=date]::-webkit-datetime-edit-year-field { color: #000; }
 
 .form-signin button[type="submit"] {
 	background-color: #1E4426;
-	font-size: 20px;
+	font-size: 18px;
 	color: white;
 	padding: 15px 10px;
 	margin-top: 15px;
 	margin-bottom: 0px;
+	margin-left: 5px;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -114,11 +120,12 @@ input[type=date]::-webkit-datetime-edit-year-field { color: #000; }
 .likeButton
 {
 	background-color: #1E4426;
-	font-size: 20px;
+	font-size: 18px;
 	color: white;
 	padding: 15px 10px;
 	margin-top: 15px;
 	margin-bottom: 0px;
+	margin-right: 5px;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -250,6 +257,56 @@ input[type=date]::-webkit-datetime-edit-year-field { color: #000; }
 	background-color: #296136;
 } 
 
+
+
+
+.select select {
+  -webkit-appearance: none;
+  width: 150px;
+  background-color: #1E4426;
+  color: white;
+  border-radius: 5px;
+  padding: 15px 10px;
+  font-size: 14px;
+  border: none;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
+  text-align: center;
+}
+
+.select select:required:invalid {
+  color: #white;
+}
+.select select option {
+  text-align: center;
+  color: #000;
+  background-color: #ddd;
+  border: none;
+  font-size: 12px;
+  line-height: 100px;
+}
+.select select option[value=""][disabled] {
+  display: none;
+}
+.select select:focus {
+  border: none;
+}
+
+/*.select select option[value="1"]{
+  color: ccc;
+  font-size: 15px;
+  padding: 10px;
+}*/
+
+
+
+
+
+
+
+
+
 .container-of-balance
 {
 	margin-top: 160px;
@@ -314,18 +371,29 @@ h3
 
 .incomes td
 { 
-	border: 2px solid black;
 	padding: 10px 10px;
 	background-color: #a6e7f2;
 	font-size: 13px;
+	border-bottom: 1px solid black;
+	
+}
+
+.incomes tr
+{
+	border-bottom: 1px solid black;
 }
 
 .incomes th 
 {
-	border: 2px solid black;
 	padding: 10px 10px;
 	background-color: #20c2df;
 	font-size: 13px;
+	
+}
+
+.incomes td:first-child
+{
+	border-right: 1px solid black;
 }
 
 .h3ColorForIncomes
@@ -344,23 +412,33 @@ h3
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	border-spacing:0;
 	border-collapse: collapse;
 }
 
 .expenses td
 { 
-	border: 2px solid black;
+	/*border-bottom: 1px solid black;*/
 	padding: 10px 10px;
 	background-color: #cccccc;
 	font-size: 13px;
 }
 
+.expenses td:first-child
+{
+	border-right: 1px solid black;
+}
+
 .expenses th 
 {
-	border: 2px solid black;
 	padding: 10px 10px;
 	background-color: #7f7f7f;
 	font-size: 13px;
+}
+
+.expenses tr
+{
+	border-bottom: 1px solid black;
 }
 
 .h3ColorForExpenses
