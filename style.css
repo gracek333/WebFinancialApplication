@@ -1,11 +1,6 @@
 html,
 body {
-  height: 100%;
-}
-
-html
-{
-	overflow-y: overlay;
+	height: 100%;
 }
 
 body
@@ -14,6 +9,11 @@ body
 	font-family: 'Open Sans', sans-serif;
 	display: flex;
 	align-items: center;
+}
+
+html
+{
+	overflow-y: overlay;
 }
 
 h1
@@ -27,28 +27,39 @@ h1
 	color: #1E4426;
 }
 
+h3
+{
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	margin-top: 0px;
+	padding-top: 20px;
+	padding-bottom: 0px;
+	border-top: 3px solid #000;
+	color: #0E5461;
+	
+}
+
+input[type=date]::-webkit-datetime-edit-year-field { color: #000; }
+
+.addedTransaction
+{
+	color: #1E4426;
+	border-bottom: 1.5px solid #1E4426 !important;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 700;
+	max-width: 240px;
+	padding-bottom: 5px;
+	margin-top: 0px;
+	padding-top: 0;
+	margin-bottom: 20px;
+	letter-spacing: 2.5px;
+}
+
 .bg-money
 {
 	background-color: #0C1D10 !important;
-}
-
-.navbar-text
-{
-	font-size: 1.8rem;
-	font-family: 'Caveat', cursive;
-	color: #fff !important;
-}
-
-.navbar-brand img
-{
-	padding-top: 8px;
-	padding-bottom: 15px;
-}
-
-.btn-md
-{
-	min-width: 47%;
-	
 }
 
 .bg-money .btn-md
@@ -57,255 +68,21 @@ h1
 	min-width: 10rem;
 }
 
-
-.form-signin 
-{
-  width: 100%;
-  max-width: 500px;
-  padding: 30px 50px;
-  margin: auto;
-  margin-top: 160px;
-  background-color: #fff;
-  border-radius: 10px;
-  color: #1E4426;
-}
-
-.form-signin .checkbox {
-  font-weight: 400;
-}
-
-.form-signin .form-floating:focus-within {
-  z-index: 2;
-}
-
-.form-signin label
-{
-	margin-bottom: 0.1rem;
-	font-size: 0.9rem;
-}
-
-.form-signin input
-{
-  color: #000 !important;
-}
-
-.form-signin input[type="email"] {
-  margin-bottom: 0;
-}
-
-.form-signin input[type="password"] {
-  margin-bottom: 0;
-}
-
-.form-signin input[type="text"] {
-  margin-top: 0;
-}
-
-input[type=date]::-webkit-datetime-edit-year-field { color: #000; }
-
-.form-signin button[type="submit"] {
-	background-color: #1E4426;
-	font-size: 18px;
-	color: white;
-	padding: 15px 10px;
-	margin-top: 15px;
-	margin-bottom: 0px;
-	margin-left: 5px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	letter-spacing: 2px;
-}
-
-.likeButton
-{
-	background-color: #1E4426;
-	font-size: 18px;
-	color: white;
-	padding: 15px 10px;
-	margin-top: 15px;
-	margin-bottom: 0px;
-	margin-right: 5px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	letter-spacing: 2px;
-}
-
-.likeButton:hover 
-{
-	color: #FFF! important;
-}
-
-.form-signin p
-{
-	font-size: 1.1rem;
-	color: #1E4426;
-}
-	
-.col-form-label
-{
-	color: #1E4426;
-	font-size: 0.9rem;
-}
-
-.form-control
-{
-	background-color: #E0F1E4;
-	color: #666;
-	border: .5px solid #1E4426;
-	font-size: 0.8rem;
-	
-}
-
-.footer
-{
-	width: 100%;
-	color: #fff !important;
-	font-size: 0.8rem;
-	text-align: center;
-	padding-top: 1rem;
-	padding-bottom: 1.2rem;
-	background-color: #050C06;
-	letter-spacing: 3px;
-
-}
-
 .bi-envelope
 {
 	padding-bottom: 0.1rem;
 }
 
-.form-select
+.btn-md
 {
-	padding-top: 8px;
-	background-color: #E0F1E4;
-	color: #000;
-	border: .5px solid #1E4426;
-	font-size: 0.8rem;
-	border-radius: 5px;
-	margin-bottom: 0.2rem;
+	min-width: 47%;
 }
 
-.modal-title
+.col-form-label
 {
-	font-family: 'Open Sans', sans-serif !important;
-	font-size: 20px;
-	text-align: center;
-	padding-bottom: 20px;
-	border-bottom: 2px solid #1E4426;
-	font-weight: 700;
 	color: #1E4426;
+	font-size: 0.9rem;
 }
-
-.modal-footer button
-{
-	background-color: #1E4426;
-	color: #fff;
-}
-
-.dropbtn {
-	
-  width: 150px;
-  background-color: #1E4426;
-  color: white;
-  border-radius: 5px;
-  padding: 15px 10px;
-  font-size: 14px;
-  border: none;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content 
-{
-	font-size: 12px;
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 150px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a 
-{
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover 
-{
-	background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content 
-{
-	display: block;
-}
-
-.dropdown:hover .dropbtn 
-{
-	background-color: #296136;
-} 
-
-
-
-
-.select select {
-  -webkit-appearance: none;
-  width: 150px;
-  background-color: #1E4426;
-  color: white;
-  border-radius: 5px;
-  padding: 15px 10px;
-  font-size: 14px;
-  border: none;
-  margin-right: auto;
-  margin-left: auto;
-  cursor: pointer;
-  text-align: center;
-}
-
-.select select:required:invalid {
-  color: #white;
-}
-.select select option {
-  text-align: center;
-  color: #000;
-  background-color: #ddd;
-  border: none;
-  font-size: 12px;
-  line-height: 100px;
-}
-.select select option[value=""][disabled] {
-  display: none;
-}
-.select select:focus {
-  border: none;
-}
-
-/*.select select option[value="1"]{
-  color: ccc;
-  font-size: 15px;
-  padding: 10px;
-}*/
-
-
-
-
-
-
-
-
 
 .container-of-balance
 {
@@ -319,7 +96,8 @@ input[type=date]::-webkit-datetime-edit-year-field { color: #000; }
 	margin-left: auto;
 }
 
-.container-of-balance button[type="submit"] {
+.container-of-balance button[type="submit"] 
+{
 	background-color: #1E4426;
 	font-size: 20px;
 	color: white;
@@ -340,70 +118,73 @@ input[type=date]::-webkit-datetime-edit-year-field { color: #000; }
 	margin: 0;
 }
 
-h3
+.dropbtn 
 {
-	font-size: 24px;
-	font-weight: 700;
-	/*color: #296136;*/
-	text-align: center;
-	margin-top: 0px;
-	padding-top: 20px;
-	padding-bottom: 0px;
-	border-top: 3px solid #000;
-	color: #0E5461;
-	
+    width: 150px;
+    background-color: #1E4426;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 10px;
+    font-size: 14px;
+    border: none;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.h3First
+.dropdown 
 {
-	border-top: 3px solid #1E4426;
-	margin-top: 10px;
+    position: relative;
+    display: inline-block;
 }
 
-.incomes
+.dropdown-content 
 {
-	padding-top: 20px;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	border-collapse: collapse;
+	font-size: 12px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
-.incomes td
-{ 
-	padding: 10px 10px;
-	background-color: #a6e7f2;
-	font-size: 13px;
-	border-bottom: 1px solid black;
-	
+.dropdown-content a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
-.incomes tr
+.dropdown-content a:hover 
 {
-	border-bottom: 1px solid black;
+	background-color: #ddd;
 }
 
-.incomes th 
+.dropdown:hover .dropbtn 
 {
-	padding: 10px 10px;
-	background-color: #20c2df;
-	font-size: 13px;
-	
+	background-color: #296136;
+} 
+
+.dropdown:hover .dropdown-content 
+{
+	display: block;
 }
 
-.incomes td:first-child
+.empty-row
 {
-	border-right: 1px solid black;
+	border-top: 2px solid #1E4426;
+	margin-left: 3px;
+	margin-right: 3px;
+	padding-bottom: 5px;
 }
 
-.h3ColorForIncomes
+.error
 {
-	color: #0E5461;
-}
-
-.table-dark
-{
-	background-color: #000 !important;
+	color: red!important;
+	font-size: 0.7rem;
+	margin-top: 5px;
+	margin-bottom: 0px;
 }
 
 .expenses
@@ -418,7 +199,6 @@ h3
 
 .expenses td
 { 
-	/*border-bottom: 1px solid black;*/
 	padding: 10px 10px;
 	background-color: #cccccc;
 	font-size: 13px;
@@ -441,9 +221,104 @@ h3
 	border-bottom: 1px solid black;
 }
 
-.h3ColorForExpenses
+.form-signin 
 {
-	color: #373737;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px 50px;
+    margin: auto;
+    margin-top: 160px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #1E4426;
+}
+
+.form-signin .checkbox 
+{
+    font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within 
+{
+    z-index: 2;
+}
+
+.form-signin label
+{
+	margin-bottom: 0.1rem;
+	font-size: 0.9rem;
+}
+
+.form-signin input
+{
+    color: #000 !important;
+}
+
+.form-signin input[type="email"] 
+{
+    margin-bottom: 0;
+}
+
+.form-signin input[type="password"] 
+{
+    margin-bottom: 0;
+}
+
+.form-signin input[type="text"] 
+{
+    margin-top: 0;
+}
+
+.form-signin button[type="submit"] 
+{
+	background-color: #1E4426;
+	font-size: 18px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+
+.form-signin p
+{
+	font-size: 1.1rem;
+	color: #1E4426;
+}
+	
+.form-control
+{
+	background-color: #E0F1E4;
+	color: #666;
+	border: .5px solid #1E4426;
+	font-size: 0.8rem;
+}
+
+.footer
+{
+	width: 100%;
+	color: #fff !important;
+	font-size: 0.8rem;
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 1.2rem;
+	background-color: #050C06;
+	letter-spacing: 3px;
+}
+
+.form-select
+{
+	padding-top: 8px;
+	background-color: #E0F1E4;
+	color: #000;
+	border: .5px solid #1E4426;
+	font-size: 0.8rem;
+	border-radius: 5px;
+	margin-bottom: 0.2rem;
 }
 
 .g-recaptcha
@@ -451,40 +326,153 @@ h3
     padding-top: 5px;
 }
 
-.empty-row
+.h3First
 {
-	border-top: 2px solid #1E4426;
-	margin-left: 3px;
-	margin-right: 3px;
-	padding-bottom: 5px;
+	border-top: 3px solid #1E4426;
+	margin-top: 10px;
 }
 
-.error
+.h3ColorForIncomes
 {
-	color: red!important;
-	font-size: 0.7rem;
-	margin-top: 5px;
-	margin-bottom: 0px;
+	color: #0E5461;
 }
 
-.addedTransaction
+.h3ColorForExpenses
 {
-	color: #1E4426;
-	border-bottom: 1.5px solid #1E4426 !important;
+	color: #373737;
+}
+
+.incomes
+{
+	padding-top: 20px;
 	text-align: center;
-	font-size: 1rem;
-	font-weight: 700;
-	max-width: 240px;
-	padding-bottom: 5px;
-	/*margin-left: 550px;
-	margin-right: 550px;*/
-	
-	margin-top: 0px;
-	padding-top: 0;
-	margin-bottom: 20px;
-	letter-spacing: 2.5px;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
 }
 
-.mt-1 {
-  margin-top: 0.12rem !important;
+.incomes td
+{ 
+	padding: 10px 10px;
+	background-color: #a6e7f2;
+	font-size: 13px;
+	border-bottom: 1px solid black;
+}
+
+.incomes tr
+{
+	border-bottom: 1px solid black;
+}
+
+.incomes th 
+{
+	padding: 10px 10px;
+	background-color: #20c2df;
+	font-size: 13px;
+}
+
+.incomes td:first-child
+{
+	border-right: 1px solid black;
+}
+
+.likeButton
+{
+	background-color: #1E4426;
+	font-size: 18px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+	margin-right: 5px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+
+.likeButton:hover 
+{
+	color: #FFF! important;
+}
+
+.modal-title
+{
+	font-family: 'Open Sans', sans-serif !important;
+	font-size: 20px;
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: 2px solid #1E4426;
+	font-weight: 700;
+	color: #1E4426;
+}
+
+.modal-footer button
+{
+	background-color: #1E4426;
+	color: #fff;
+}
+
+.mt-1 
+{
+    margin-top: 0.12rem !important;
+}
+
+.navbar-text
+{
+	font-size: 1.8rem;
+	font-family: 'Caveat', cursive;
+	color: #fff !important;
+}
+
+.navbar-brand img
+{
+	padding-top: 8px;
+	padding-bottom: 15px;
+}
+
+.select select 
+{
+    -webkit-appearance: none;
+    width: 150px;
+    background-color: #1E4426;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 10px;
+    font-size: 14px;
+    border: none;
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+    text-align: center;
+}
+
+.select select:required:invalid 
+{
+    color: #white;
+}
+
+.select select option 
+{
+    text-align: center;
+    color: #000;
+    background-color: #ddd;
+    border: none;
+    font-size: 12px;
+    line-height: 100px;
+}
+
+.select select option[value=""][disabled] 
+{
+    display: none;
+}
+
+.select select:focus 
+{
+    border: none;
+}
+
+.table-dark
+{
+	background-color: #000 !important;
 }
