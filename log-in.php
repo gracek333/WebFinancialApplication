@@ -40,7 +40,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<span class="navbar-text">Twój domowy budżet online!</span>
 				<form class="ms-auto text-center">
-					<a class="btn btn-md btn-warning me-2 mt-1" href="registration.php" >Zarejestruj się</a>
+					<a class="btn btn-md btn-warning me-2 mt-1" href="index.php" >Zarejestruj się</a>
 				</form>
 			</div>
 		</div>
